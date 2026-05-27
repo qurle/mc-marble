@@ -1,0 +1,46 @@
+:root {
+
+	--color-main: #FAFAFA;
+	--color-main-50: #FAFAFA80;
+	--color-main-25: #FAFAFA40;
+	--color-main-10: #FAFAFA1A;
+	--color-background: #222;
+	--color-accent: #CF0;
+
+	--space-xs: 0.125rem;
+	--space-s: 0.25rem;
+	--space-m: 0.5rem;
+	--space-l: 1rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+
+	--transition-m: 300ms ease-in-out;
+
+	--page-padding-v: 8rem;
+	--page-padding-h: 6rem;
+
+	--readable-width: 70ch;
+
+	--font-accent: "Minecraft", "Pixelify Sans", 'Courier New', Courier, monospace;
+	--font-heading: "Press Start 2P", "Gill Sans", "Helvetica Now", Helvetica, system-ui, sans-serif;
+
+	--scrollbar-color: var(--color-main-50);
+	--scrollbar-color-hover: var(--color-main);
+	--scrollbar-bg: var(--color-background);
+	--scrollbar-radius: 0;
+	--scrollbar-width: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+	:root {
+		--page-padding-v: 4rem;
+		--page-padding-h: 2rem;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	:root {
+		--page-padding-v: 3rem;
+		--page-padding-h: 1rem;
+	}
+}

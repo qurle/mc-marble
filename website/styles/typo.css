@@ -1,0 +1,100 @@
+section.text {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		text-wrap: balance;
+	}
+
+	h1 {
+		&:not(:first-child) {
+			padding-top: var(--space-2xl);
+			font-size: 2em;
+		}
+	}
+
+	h2 {
+		&:not(:first-child) {
+			padding-top: var(--space-xl);
+			font-size: 1.5em;
+		}
+	}
+
+	h3 {
+		padding-top: var(--space-l);
+	}
+
+	h4,
+	h5 {
+		font-weight: 500;
+		opacity: .5;
+
+		&:not(:first-child) {
+			padding-top: var(--space-l);
+		}
+	}
+
+	h5 {
+		font-size: 0.8em;
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	p {
+		display: block;
+		text-wrap: pretty;
+		max-width: var(--readable-width);
+		line-height: 140%;
+
+		&:not(:first-child) {
+			padding-top: var(--space-l);
+		}
+	}
+
+	ul {
+		margin-top: var(--space-l);
+
+		ul {
+			margin-top: 0;
+			margin-left: var(--space-xl);
+		}
+	}
+
+	ol {
+		margin-top: var(--space-l);
+
+		ol {
+			margin-top: 0;
+			margin-left: var(--space-xl);
+		}
+	}
+
+	p+ul,
+	p+ol {
+		margin-top: var(--space-m);
+	}
+
+	li:not(:last-child) {
+		margin-bottom: 0.1em
+	}
+
+	img {
+		vertical-align: bottom;
+		width: 640px;
+		max-width: 100%;
+	}
+
+	a:has(>img) {
+		display: block;
+	}
+
+	em {
+		padding: var(--space-xs) var(--space-s);
+		background: var(--color-main-10);
+		border-radius: 4px;
+	}
+}

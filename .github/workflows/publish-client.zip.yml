@@ -6,6 +6,8 @@ permissions:
 on:
   push:
     branches: [ main ]
+    paths:
+          - 'client/**'
   workflow_dispatch:
 
 jobs:

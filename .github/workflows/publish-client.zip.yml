@@ -1,0 +1,33 @@
+name: Publish client as minecraft.zip
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create minecraft.zip from client/ contents
+        run: |
+          if [ -d client ]; then
+            cd client
+            zip -r ../minecraft.zip .
+            echo "Created minecraft.zip"
+          else
+            echo "client directory not found" && exit 1
+          fi
+
+      - name: Create or update release and upload asset
+        uses: ncipollo/release-action@v1
+        with:
+          tag: release
+          name: release
+          overwrite: true
+          files: minecraft.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
